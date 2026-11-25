@@ -1,0 +1,20 @@
+# User-approved pipeline defaults (Phase 4.0a, decided 2026-09-01).
+# Explicit CLI flags override these; these override built-in code defaults.
+# Dry-run is intentionally NOT settable here: it must never be a default.
+
+search_backend: brave         # paid Brave API (2026-11-09); ddgs/searxng remain selectable
+identity_first: true
+mine_listicles: true
+expand_queries: true          # was opt-in before Phase 4.0a
+max_baseline_queries: 15      # Phase 4.3: ceiling on computed baseline queries (segments x countries)
+max_companies: 10
+max_listicles: 3
+max_variants: 2
+max_companies_per_listicle: 15
+max_liveness_checks: 10      # Phase 3.6d: bounded job-link liveness checks per run
+
+# Phase 4.1: recommendation groups. A job with a hard blocker is always skip.
+worth_threshold: 0.70        # score >= this -> "worth applying"
+consider_threshold: 0.40     # score >= this (and < worth) -> "consider"; below -> "skip"
+max_llm_notes: 10            # ceiling on optional per-job LLM explanations per run
+max_profile_extractions: 100 # ceiling on paid job-profile extractions per match run (scoring is free, unbounded)

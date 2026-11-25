@@ -1,0 +1,21 @@
+{
+  "kind": "api",
+  "allowed_hosts": ["boards-api.greenhouse.io"],
+  "verification": {
+    "expected_count": 173,
+    "sample_titles": ["Account Manager", "Associate Legal Counsel, Japan"],
+    "url_pattern": "^https://careers\\.airbnb\\.com/positions/\\d+\\?gh_jid=\\d+$"
+  },
+  "method": "GET",
+  "url_template": "https://boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true&paginate=true&page={page}",
+  "vars": {"token": "airbnb"},
+  "pagination": {"kind": "page", "param": "page", "start": 1, "step": 1, "max_pages": 20},
+  "list_path": ["jobs"],
+  "field_map": {
+    "url": {"path": ["absolute_url"]},
+    "title": {"path": ["title"]},
+    "location": {"path": ["location", "name"]},
+    "posted_date": {"path": ["first_published"], "transform": "iso_date"},
+    "description": {"path": ["content"], "transform": "html_text"}
+  }
+}

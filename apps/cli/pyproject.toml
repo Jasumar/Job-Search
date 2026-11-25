@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jobsearch"
+version = "0.1.0"
+description = "Local-first job search agent — CLI wrapper over jobsearch-core"
+requires-python = ">=3.11"
+license = { text = "All rights reserved" }
+dependencies = [
+    "jobsearch-core",
+]
+
+[project.scripts]
+jobsearch = "jobsearch_core.cli:main"
+
+[tool.uv.sources]
+jobsearch-core = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobsearch"]

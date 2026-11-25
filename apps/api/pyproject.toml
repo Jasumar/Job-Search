@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jobsearch-api"
+version = "0.1.0"
+description = "FastAPI backend (Phase 4.2) — placeholder package"
+requires-python = ">=3.11"
+dependencies = [
+    "jobsearch-core",
+    "jobsearch-worker",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "python-multipart>=0.0.32",
+]
+
+[tool.uv.sources]
+jobsearch-core = { workspace = true }
+jobsearch-worker = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobsearch_api"]

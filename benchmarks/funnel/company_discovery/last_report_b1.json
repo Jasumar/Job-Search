@@ -1,0 +1,374 @@
+{
+ "snapshot": "2026-10-09",
+ "top_n": 10,
+ "by_family": {
+  "1": {
+   "scored": 16,
+   "found": 14,
+   "unscored": 0,
+   "rate": 0.875
+  },
+  "2": {
+   "scored": 6,
+   "found": 4,
+   "unscored": 3,
+   "rate": 0.6666666666666666
+  },
+  "3": {
+   "scored": 8,
+   "found": 4,
+   "unscored": 4,
+   "rate": 0.5
+  },
+  "4": {
+   "scored": 11,
+   "found": 4,
+   "unscored": 0,
+   "rate": 0.36363636363636365
+  },
+  "5": {
+   "scored": 3,
+   "found": 3,
+   "unscored": 0,
+   "rate": 1.0
+  },
+  "6": {
+   "scored": 21,
+   "found": 1,
+   "unscored": 0,
+   "rate": 0.047619047619047616
+  }
+ },
+ "total": {
+  "scored": 65,
+  "found": 30,
+  "unscored": 7,
+  "rate": 0.46153846153846156
+ },
+ "queries": [
+  {
+   "key": "q01",
+   "family": 1,
+   "query": "largest technology companies in the world",
+   "status": "ok",
+   "expected": [
+    "nvidia",
+    "apple",
+    "google",
+    "microsoft",
+    "amazon",
+    "samsung"
+   ],
+   "found": {
+    "nvidia": true,
+    "apple": true,
+    "google": false,
+    "microsoft": true,
+    "amazon": true,
+    "samsung": false
+   }
+  },
+  {
+   "key": "q02",
+   "family": 1,
+   "query": "biggest tech companies by market capitalization",
+   "status": "ok",
+   "expected": [
+    "nvidia",
+    "apple",
+    "google",
+    "microsoft",
+    "amazon"
+   ],
+   "found": {
+    "nvidia": true,
+    "apple": true,
+    "google": true,
+    "microsoft": true,
+    "amazon": true
+   }
+  },
+  {
+   "key": "q03",
+   "family": 1,
+   "query": "top global technology companies by revenue",
+   "status": "ok",
+   "expected": [
+    "samsung",
+    "apple",
+    "amazon",
+    "microsoft",
+    "google"
+   ],
+   "found": {
+    "samsung": true,
+    "apple": true,
+    "amazon": true,
+    "microsoft": true,
+    "google": true
+   }
+  },
+  {
+   "key": "q04",
+   "family": 2,
+   "query": "largest finance companies in Finland",
+   "status": "empty",
+   "expected": [
+    "nordea",
+    "op_pohjola",
+    "danske_bank"
+   ],
+   "found": {
+    "nordea": null,
+    "op_pohjola": null,
+    "danske_bank": null
+   }
+  },
+  {
+   "key": "q05",
+   "family": 2,
+   "query": "suurimmat finanssiyritykset Suomessa",
+   "status": "ok",
+   "expected": [
+    "nordea",
+    "op_pohjola",
+    "danske_bank"
+   ],
+   "found": {
+    "nordea": false,
+    "op_pohjola": false,
+    "danske_bank": true
+   }
+  },
+  {
+   "key": "q06",
+   "family": 2,
+   "query": "biggest banks in Finland",
+   "status": "ok",
+   "expected": [
+    "nordea",
+    "op_pohjola",
+    "danske_bank"
+   ],
+   "found": {
+    "nordea": true,
+    "op_pohjola": true,
+    "danske_bank": true
+   }
+  },
+  {
+   "key": "q07",
+   "family": 3,
+   "query": "largest companies in Finland by revenue",
+   "status": "ok",
+   "expected": [
+    "neste",
+    "nokia",
+    "kone",
+    "kesko"
+   ],
+   "found": {
+    "neste": true,
+    "nokia": true,
+    "kone": true,
+    "kesko": true
+   }
+  },
+  {
+   "key": "q08",
+   "family": 3,
+   "query": "suurimmat yritykset Suomessa liikevaihto",
+   "status": "empty",
+   "expected": [
+    "neste",
+    "nokia",
+    "kone",
+    "kesko"
+   ],
+   "found": {
+    "neste": null,
+    "nokia": null,
+    "kone": null,
+    "kesko": null
+   }
+  },
+  {
+   "key": "q09",
+   "family": 3,
+   "query": "biggest Finnish corporations list",
+   "status": "ok",
+   "expected": [
+    "neste",
+    "nokia",
+    "kone",
+    "kesko"
+   ],
+   "found": {
+    "neste": false,
+    "nokia": false,
+    "kone": false,
+    "kesko": false
+   }
+  },
+  {
+   "key": "q10",
+   "family": 4,
+   "query": "best startups in Finland",
+   "status": "ok",
+   "expected": [
+    "iceye",
+    "oura",
+    "iqm",
+    "nestai"
+   ],
+   "found": {
+    "iceye": true,
+    "oura": true,
+    "iqm": false,
+    "nestai": false
+   }
+  },
+  {
+   "key": "q11",
+   "family": 4,
+   "query": "suomalaiset startup-yritykset",
+   "status": "ok",
+   "expected": [
+    "iceye",
+    "oura",
+    "iqm",
+    "nestai"
+   ],
+   "found": {
+    "iceye": false,
+    "oura": false,
+    "iqm": false,
+    "nestai": false
+   }
+  },
+  {
+   "key": "q12",
+   "family": 4,
+   "query": "Finnish deep tech startups list",
+   "status": "ok",
+   "expected": [
+    "iceye",
+    "iqm",
+    "nestai"
+   ],
+   "found": {
+    "iceye": true,
+    "iqm": true,
+    "nestai": false
+   }
+  },
+  {
+   "key": "q13",
+   "family": 5,
+   "query": "largest Estonian startups",
+   "status": "ok",
+   "expected": [
+    "bolt"
+   ],
+   "found": {
+    "bolt": true
+   }
+  },
+  {
+   "key": "q14",
+   "family": 5,
+   "query": "Estonian tech startups unicorns",
+   "status": "ok",
+   "expected": [
+    "bolt"
+   ],
+   "found": {
+    "bolt": true
+   }
+  },
+  {
+   "key": "q15",
+   "family": 5,
+   "query": "Tallinn tech startups list",
+   "status": "ok",
+   "expected": [
+    "bolt"
+   ],
+   "found": {
+    "bolt": true
+   }
+  },
+  {
+   "key": "q16",
+   "family": 6,
+   "query": "pienet ohjelmistotalot Oulu",
+   "status": "ok",
+   "expected": [
+    "digia",
+    "vincit",
+    "lemonsoft",
+    "exove",
+    "evermade",
+    "wapice",
+    "netum"
+   ],
+   "found": {
+    "digia": false,
+    "vincit": false,
+    "lemonsoft": false,
+    "exove": false,
+    "evermade": false,
+    "wapice": false,
+    "netum": false
+   }
+  },
+  {
+   "key": "q17",
+   "family": 6,
+   "query": "ohjelmistoyritykset Turku",
+   "status": "ok",
+   "expected": [
+    "digia",
+    "vincit",
+    "lemonsoft",
+    "exove",
+    "evermade",
+    "wapice",
+    "netum"
+   ],
+   "found": {
+    "digia": true,
+    "vincit": false,
+    "lemonsoft": false,
+    "exove": false,
+    "evermade": false,
+    "wapice": false,
+    "netum": false
+   }
+  },
+  {
+   "key": "q18",
+   "family": 6,
+   "query": "Finnish software consultancies Oulu Turku",
+   "status": "ok",
+   "expected": [
+    "digia",
+    "vincit",
+    "lemonsoft",
+    "exove",
+    "evermade",
+    "wapice",
+    "netum"
+   ],
+   "found": {
+    "digia": false,
+    "vincit": false,
+    "lemonsoft": false,
+    "exove": false,
+    "evermade": false,
+    "wapice": false,
+    "netum": false
+   }
+  }
+ ]
+}

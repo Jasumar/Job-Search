@@ -1,0 +1,141 @@
+# Role taxonomy (MF3): broad groups, each with common roles. Data, not code.
+#
+# A role's full id is "<group>/<role>" (e.g. "technology/backend"); a group id
+# alone ("technology") selects every role in it. The profile stores these ids in
+# `role_families`; job-profile extraction records a job's `job_group` and
+# `job_role` from this list (or "other"); the score compares them in code.
+#
+# `keywords` are job-title words or phrases. They rank unprofiled jobs before
+# extraction (prefit) and stop a job from being hidden as "not your role" when
+# its title names a selected role. Matching is whole-word and case-free, so keep
+# each keyword specific: "engineer" alone would match every engineering title.
+#
+# The owner can also type free-text roles; those are mapped to these ids once,
+# when typed, and stored with the profile.
+
+groups:
+  - id: technology
+    label: Technology & software
+    roles:
+      - {id: software-engineer, label: Software engineer, keywords: [software engineer, software developer, developer, programmer, ohjelmistokehittäjä, ohjelmistosuunnittelija]}
+      - {id: backend, label: Backend developer, keywords: [backend, back-end, back end, python developer, java developer, node.js developer, api developer]}
+      - {id: frontend, label: Frontend developer, keywords: [frontend, front-end, front end, react developer, web developer]}
+      - {id: fullstack, label: Full-stack developer, keywords: [full stack, full-stack, fullstack]}
+      - {id: mobile, label: Mobile developer, keywords: [mobile developer, ios developer, android developer, mobile engineer]}
+      - {id: devops, label: DevOps & platform engineer, keywords: [devops, platform engineer, site reliability, sre, cloud engineer, infrastructure engineer, automation engineer, ci/cd]}
+      - {id: data-engineer, label: Data engineer, keywords: [data engineer, data platform, etl developer, analytics engineer]}
+      - {id: data-analyst, label: Data analyst, keywords: [data analyst, business intelligence, bi developer, bi analyst, analytics]}
+      - {id: data-scientist, label: Data scientist, keywords: [data scientist, data science]}
+      - {id: ml-engineer, label: AI / machine learning engineer, keywords: [machine learning, ml engineer, ai engineer, mlops, llm, nlp, deep learning, computer vision]}
+      - {id: qa, label: QA & test engineer, keywords: [qa engineer, test engineer, test automation, quality assurance, sdet, tester]}
+      - {id: security, label: Security engineer, keywords: [security engineer, cyber security, cybersecurity, information security, penetration tester, soc analyst]}
+      - {id: architect, label: Software / solution architect, keywords: [software architect, solution architect, solutions architect, enterprise architect, cloud architect]}
+      - {id: solutions-engineer, label: Solutions engineer, keywords: [solutions engineer, solution engineer, sales engineer, technical consultant, integration engineer]}
+      - {id: embedded-software, label: Embedded software engineer, keywords: [embedded software, firmware, embedded developer]}
+      - {id: it-support, label: IT support & administration, keywords: [it support, system administrator, sysadmin, it specialist, helpdesk, network administrator]}
+      - {id: engineering-manager, label: Engineering manager, keywords: [engineering manager, tech lead, technical lead, head of engineering, cto]}
+  - id: engineering
+    label: Engineering (non-software)
+    roles:
+      - {id: hardware, label: Hardware engineer, keywords: [hardware engineer, hw engineer, hardware design, asic, fpga, pcb]}
+      - {id: electrical, label: Electrical engineer, keywords: [electrical engineer, electronics engineer, power electronics, sähkösuunnittelija]}
+      - {id: mechanical, label: Mechanical engineer, keywords: [mechanical engineer, mechanical design, konesuunnittelija]}
+      - {id: rf, label: RF & telecom engineer, keywords: [rf engineer, radio engineer, antenna, telecom engineer]}
+      - {id: industrial-automation, label: Industrial automation engineer, keywords: [plc, scada, automation designer, control systems, automaatiosuunnittelija]}
+      - {id: process, label: Process & chemical engineer, keywords: [process engineer, chemical engineer]}
+      - {id: manufacturing, label: Manufacturing & production engineer, keywords: [manufacturing engineer, production engineer, quality engineer]}
+      - {id: civil, label: Civil & structural engineer, keywords: [civil engineer, structural engineer, rakennesuunnittelija]}
+      - {id: systems, label: Systems engineer, keywords: [systems engineer, system engineer]}
+  - id: product
+    label: Product & design
+    roles:
+      - {id: product-manager, label: Product manager, keywords: [product manager, product owner, head of product]}
+      - {id: ux-designer, label: UX / UI designer, keywords: [ux designer, ui designer, product designer, ux researcher, interaction designer]}
+      - {id: graphic-designer, label: Graphic & visual designer, keywords: [graphic designer, visual designer, art director]}
+  - id: healthcare
+    label: Healthcare
+    roles:
+      - {id: nurse, label: Nurse, keywords: [nurse, sairaanhoitaja, lähihoitaja]}
+      - {id: physician, label: Physician, keywords: [physician, doctor, lääkäri, surgeon]}
+      - {id: pharmacist, label: Pharmacist, keywords: [pharmacist, farmaseutti, proviisori]}
+      - {id: therapist, label: Therapist, keywords: [physiotherapist, therapist, psychologist, fysioterapeutti]}
+      - {id: laboratory, label: Laboratory specialist, keywords: [laboratory, lab technician, bioanalyst]}
+      - {id: clinical-research, label: Clinical research, keywords: [clinical research, clinical trial, medical affairs]}
+  - id: sales
+    label: Sales
+    roles:
+      - {id: account-executive, label: Account executive, keywords: [account executive, sales executive, myyjä]}
+      - {id: account-manager, label: Account manager, keywords: [account manager, key account]}
+      - {id: business-development, label: Business development, keywords: [business development, bdr, sdr, sales development]}
+      - {id: pre-sales, label: Pre-sales, keywords: [pre-sales, presales]}
+      - {id: sales-manager, label: Sales manager, keywords: [sales manager, head of sales, sales director, myyntipäällikkö]}
+  - id: marketing
+    label: Marketing & communications
+    roles:
+      - {id: digital-marketing, label: Digital marketing, keywords: [digital marketing, performance marketing, growth marketing, seo, sem]}
+      - {id: content, label: Content & copywriting, keywords: [content, copywriter, editor]}
+      - {id: product-marketing, label: Product marketing, keywords: [product marketing]}
+      - {id: brand, label: Brand & marketing manager, keywords: [brand manager, marketing manager, head of marketing, markkinointipäällikkö]}
+      - {id: communications, label: Communications & PR, keywords: [communications, public relations, viestintä]}
+  - id: finance
+    label: Finance
+    roles:
+      - {id: accountant, label: Accountant, keywords: [accountant, accounting, bookkeeper, kirjanpitäjä]}
+      - {id: controller, label: Controller, keywords: [controller, controlling, business controller]}
+      - {id: financial-analyst, label: Financial analyst, keywords: [financial analyst, fp&a, investment analyst]}
+      - {id: auditor, label: Auditor, keywords: [auditor, audit, tilintarkastaja]}
+      - {id: treasury, label: Treasury & finance manager, keywords: [treasury, finance manager, cfo, head of finance]}
+      - {id: payroll, label: Payroll, keywords: [payroll, palkanlaskija]}
+  - id: legal
+    label: Legal & compliance
+    roles:
+      - {id: counsel, label: Lawyer / counsel, keywords: [counsel, lawyer, attorney, legal, juristi, lakimies, solicitor]}
+      - {id: paralegal, label: Paralegal, keywords: [paralegal, legal assistant]}
+      - {id: compliance, label: Compliance, keywords: [compliance, regulatory affairs, privacy officer, data protection officer]}
+      - {id: licensing, label: Licensing & IP, keywords: [licensing, intellectual property, patent, ipr]}
+      - {id: contracts, label: Contract management, keywords: [contract manager, contracts manager, commercial manager]}
+  - id: hr
+    label: People & HR
+    roles:
+      - {id: recruiter, label: Recruiter, keywords: [recruiter, talent acquisition, rekrytoija]}
+      - {id: hr-generalist, label: HR generalist, keywords: [hr generalist, hr specialist, hr coordinator, hr manager, henkilöstö]}
+      - {id: hr-business-partner, label: HR business partner, keywords: [hr business partner, hrbp, people partner]}
+      - {id: learning, label: Learning & development, keywords: [learning and development, l&d, training manager]}
+  - id: operations
+    label: Operations & project management
+    roles:
+      - {id: project-manager, label: Project manager, keywords: [project manager, projektipäällikkö, delivery manager]}
+      - {id: program-manager, label: Program manager, keywords: [program manager, programme manager, portfolio manager]}
+      - {id: operations-manager, label: Operations manager, keywords: [operations manager, head of operations, coo]}
+      - {id: supply-chain, label: Supply chain & logistics, keywords: [supply chain, logistics, warehouse, logistiikka]}
+      - {id: procurement, label: Procurement & purchasing, keywords: [procurement, purchasing, buyer, sourcing, hankinta]}
+  - id: customer-service
+    label: Customer service & success
+    roles:
+      - {id: customer-support, label: Customer support, keywords: [customer support, customer service, asiakaspalvelu, support agent]}
+      - {id: customer-success, label: Customer success, keywords: [customer success]}
+      - {id: technical-support, label: Technical support, keywords: [technical support, support engineer, service desk]}
+  - id: management
+    label: Leadership & consulting
+    roles:
+      - {id: executive, label: Executive / director, keywords: [director, vice president, vp, chief, head of, managing director, toimitusjohtaja]}
+      - {id: consultant, label: Management consultant, keywords: [management consultant, business consultant, strategy consultant]}
+      - {id: business-analyst, label: Business analyst, keywords: [business analyst]}
+  - id: research-education
+    label: Research & education
+    roles:
+      - {id: researcher, label: Researcher, keywords: [researcher, research scientist, postdoc, doctoral researcher, tutkija]}
+      - {id: teacher, label: Teacher / lecturer, keywords: [teacher, lecturer, professor, opettaja]}
+      - {id: trainer, label: Trainer, keywords: [trainer, instructor, kouluttaja]}
+  - id: administration
+    label: Administration
+    roles:
+      - {id: assistant, label: Office & executive assistant, keywords: [assistant, office manager, receptionist, secretary, assistentti]}
+      - {id: administrator, label: Administrator, keywords: [administrator, coordinator, specialist administration]}
+  - id: trades-services
+    label: Trades, retail & hospitality
+    roles:
+      - {id: technician, label: Technician & mechanic, keywords: [technician, mechanic, electrician, asentaja, sähköasentaja]}
+      - {id: retail, label: Retail, keywords: [store manager, sales associate, cashier, myymälä]}
+      - {id: hospitality, label: Hospitality & food, keywords: [chef, cook, waiter, barista, kokki, hotel]}
+      - {id: driver, label: Driver & transport, keywords: [driver, kuljettaja]}

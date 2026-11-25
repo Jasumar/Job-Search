@@ -1,0 +1,207 @@
+# Careers-page entry resolution vocabulary (Phase 4.0d, plan-scraping.md
+# §Careers-page work §Entry resolution).
+#
+# A landing page is resolved to the real open-positions page by ranking its
+# links against this list, then letting the extractor decide which page is the
+# listing. The list only orders the bounded fetches (MAX_HOPS rounds, three
+# fetches per round, a per-company cap); a page with no postings is never
+# accepted as the entry, however well its label scores.
+#
+# Matching folds diacritics and case, so "tyopaikat" and "Työpaikat" both match
+# "työpaikat". Add a term here instead of a regex in code: the vocabulary is
+# the whole language layer.
+#
+# Keep terms language-generic rather than employer-specific. "urat"/"uramme"
+# (our careers) are included because they are the standard Finnish nav label for
+# the jobs section, not because they guarantee a listing page — the extractor
+# check covers that.
+
+link_terms:
+  fi:
+    - avoimet työpaikat
+    - avoimet työt
+    - avoimet tehtävät
+    - avoimet paikat
+    - työpaikat
+    - työpaikka
+    - työpaikkamme
+    - työpaikkahaku
+    - hae töitä
+    - rekrytointi
+    - urat
+    - uramme
+    - ura
+  sv:
+    - lediga jobb
+    - lediga tjänster
+    - alla jobb
+    - sök jobb
+    - vi söker
+    - jobb
+    - karriär
+    - karriären
+  de:
+    - stellenangebote
+    - stellenausschreibungen
+    - offene stellen
+    - offene positionen
+    - jobangebote
+    - wir suchen
+    - stellen
+    - karriere
+    - jobs
+  en:
+    - open positions
+    - open roles
+    - open jobs
+    - open vacancies
+    - open opportunities
+    - current openings
+    - current vacancies
+    - current opportunities
+    - career opportunities
+    - career openings
+    - job opportunities
+    - job vacancies
+    - job listings
+    - job search
+    - see all jobs
+    - view all jobs
+    - all jobs
+    - all vacancies
+    - all open positions
+    - our jobs
+    - our vacancies
+    - explore jobs
+    - search jobs
+    - search openings
+    - browse jobs
+    - join us
+    - join our team
+    - work with us
+    - vacancies
+    - positions
+    - careers
+    - jobs
+  lv:
+    - vakances
+    - mūsu vakances
+    - darba vietas
+    - darba piedāvājumi
+    - visi darba piedāvājumi
+    - pievienojies mums
+    - karjera
+  lt:
+    - laisvos darbo vietos
+    - visos darbo vietos
+    - darbo pasiūlymai
+    - darbo vietos
+    - karjera
+    - prisijunk prie mūsų
+    - darbas
+  et:
+    - tööpakkumised
+    - avatud töökohad
+    - vabad töökohad
+    - kõik töökohad
+    - liitu meiega
+    - karjäär
+    - töökohad
+  pl:
+    - oferty pracy
+    - wszystkie oferty pracy
+    - aktualne oferty pracy
+    - wolne stanowiska
+    - dołącz do nas
+    - kariera
+    - praca
+    - oferty
+
+# Path tokens that name a listing surface. Scored per token on the candidate
+# URL path; a candidate whose last path segment carries no listing token and no
+# section modifier is a posting or a section page, not an entry.
+path_terms:
+  - jobs
+  - job
+  - careers
+  - career
+  - vacancies
+  - vacancy
+  - positions
+  - position
+  - openings
+  - opening
+  - opportunities
+  - listings
+  - avoimet
+  - tyopaikat
+  - tyopaikka
+  - tehtavat
+  - urat
+  - ura
+  - rekrytointi
+  - jobb
+  - lediga
+  - karriar
+  - karriere
+  - stellen
+  - stellenangebote
+  - arbeiten
+  - vakances
+  - darbas
+  - darbo
+  - vietos
+  - pasiulymai
+  - toopakkumised
+  - tookohad
+  - tood
+  - oferty
+  - pracy
+  - praca
+  - kariera
+  - stanowiska
+
+# Section scoping words: a listing surface may be named by its section plus one
+# of these ("/avoimet-tyopaikat/kaikki"), and the last segment is then the
+# section modifier, not a listing term. They never make a page an entry on
+# their own — the extractor still has to find postings on it.
+section_modifiers:
+  - all
+  - kaikki
+  - search
+  - results
+  - search results
+  - join us
+  - list
+  - open
+  - browse
+  - haku
+  - sok
+  - alle
+  - koik
+  - wszystkie
+  - visos
+  - visi
+
+# A subset listing: a page that lists *some* of the postings (one category, one
+# team, one location, one audience). Such a page may rescue a descent that found
+# nothing, but it never displaces a page that already lists postings — the
+# Amazon /job_categories and Nordea /internships-student-jobs traps.
+subset_segments:
+  - categories
+  - category
+  - teams
+  - team
+  - locations
+  - location
+  - departments
+  - department
+  - internships
+  - internship
+  - students
+  - student
+  - graduates
+  - graduate
+  - trainees
+  - trainee
+  - apprentices

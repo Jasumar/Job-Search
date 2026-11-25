@@ -1,0 +1,121 @@
+{
+ "nokia_plain_1": {
+  "url": "https://jobs.nokia.com/en/sites/CX_1/job/30607",
+  "label": "reachable",
+  "last_verified": "2026-10-02",
+  "note": "Employer careers site, server-rendered posting body.",
+  "seeded_from": "data/jobs.db id 1"
+ },
+ "nokia_plain_2": {
+  "url": "https://jobs.nokia.com/en/sites/CX_1/job/33254",
+  "label": "too_thin",
+  "last_verified": "2026-10-02",
+  "note": "Corrected 2026-10-02 from reachable. Live fetch returns 'View More Jobs / This job is no longer available' (76 chars) - the posting is gone, transport worked. DB row 4 status=rejected agrees. A dead posting URL is NOT a reach failure.",
+  "seeded_from": "data/jobs.db id 4"
+ },
+ "ashby_plain_1": {
+  "url": "https://jobs.ashbyhq.com/anyone-ai/e795562e-4cfb-4903-bcca-6edfc4aca554",
+  "label": "reachable",
+  "last_verified": "2026-10-02",
+  "note": "Ashby-hosted board, server-rendered.",
+  "seeded_from": "data/jobs.db, anyone-ai block"
+ },
+ "builtin_plain_1": {
+  "url": "https://builtin.com/job/recuiter/10231541",
+  "label": "transport_error",
+  "last_verified": "2026-10-02",
+  "note": "Corrected 2026-10-02 from reachable. Live fetch raises; both tiers fail. DB row 479 holds a 6954-char description captured earlier, so the site did work once - the URL is now failing. Note builtin.com/job/recuiter/... is itself a malformed URL (typo in the real one), which is likely the cause. Unscored: a transport error is not a property of the site.",
+  "seeded_from": "data/jobs.db, builtin.com block"
+ },
+ "duckduckgo_pdf": {
+  "url": "https://duckduckgo.com/static-assets/files/pages/careers/DuckDuckGo-Recruiting-Privacy-Policy-effective-September-30-2025.pdf",
+  "label": "binary_document",
+  "last_verified": "2026-10-02",
+  "note": "Reaching this at all is the bug: a privacy PDF was mined as a posting. Confirms the live DB's binary-description row is a real defect, not a label artefact.",
+  "seeded_from": "data/jobs.db, .pdf row"
+ },
+ "siemens_login_wall": {
+  "url": "https://jobs.siemens.com/en_US/externaljobs/AIRecommendations",
+  "label": "login_wall",
+  "last_verified": "2026-10-02",
+  "note": "Live probe returned 'Already registered? Login' with a 763-char body. 763 chars clears every length threshold in the transport and is stored as a description.",
+  "seeded_from": "data/jobs.db, jobs.siemens.com block"
+ },
+ "siemens_login_wall_2": {
+  "url": "https://jobs.siemens.com/fr_FR/externaljobs",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Unlabelled 2026-10-02. French locale, 1372 chars, reads as an account verification notice, not a login wall. Not a posting URL at all -> should be relabelled not_a_posting or dropped. Left for the user's hand.",
+  "seeded_from": "data/jobs.db, jobs.siemens.com block"
+ },
+ "siemens_faq_page": {
+  "url": "https://www.siemens.com/global/en/company/jobs/faq.html",
+  "label": "not_a_posting",
+  "last_verified": "2026-10-02",
+  "note": "Employer FAQ page, 20783 chars, reads as a perfectly good posting to any length-based check. Excluded from scoring on purpose - it belongs to discovery and to suite entry 5, not to transport.",
+  "seeded_from": "data/jobs.db, www.siemens.com block"
+ },
+ "brightly_services_page": {
+  "url": "https://www.brightly.fi/services/enterprise-data-ai-platforms",
+  "label": "not_a_posting",
+  "last_verified": "2026-10-02",
+  "note": "Marketing page with 5158 chars. Same failure mode as the FAQ page: reachable in the transport sense, wrong in the semantic sense.",
+  "seeded_from": "data/jobs.db, www.brightly.fi block"
+ },
+ "google_gti": {
+  "url": "https://www.google.com/about/careers/applications/jobs/results/137787779495928518-software-engineer-ii-gti-threat-intelligence?target_level=EARLY",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Google Careers. Landing-style SPA with a job-id in the path.",
+  "seeded_from": "user-provided job_description_benchmark.txt"
+ },
+ "nordea_safekeeping": {
+  "url": "https://careers.nordea.com/job/Gda%C5%84sk-Expert-Java-Developer-and-Tech-Lead%2C-Safekeeping-team-80-309/1424734033/?feedId=451033&amp;utm_source=CareerSite",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Nordea, SuccessFactors-style board. Note the &amp; in the stored URL.",
+  "seeded_from": "user-provided"
+ },
+ "microsoft_careers": {
+  "url": "https://apply.careers.microsoft.com/careers?start=0&pid=1970393557022418&sort_by=timestamp",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Microsoft apply site, listing URL rather than a posting.",
+  "seeded_from": "user-provided"
+ },
+ "iceye_ashby": {
+  "url": "https://jobs.ashbyhq.com/iceye/c51065ca-6ecb-4ce9-9dcb-d48b397dabdd",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Ashby board, same platform as the seeded ashby case but a different tenant build.",
+  "seeded_from": "user-provided"
+ },
+ "rippling_chess": {
+  "url": "https://ats.rippling.com/en-GB/chess/jobs/a3454ffa-c244-4d38-9357-45d895718899",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Rippling ATS, en-GB locale path.",
+  "seeded_from": "user-provided"
+ },
+ "accenture_security": {
+  "url": "https://www.accenture.com/gb-en/careers/jobdetails?id=R00311068_en&title=Security+Consultant+-+H%26PS",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "Accenture corporate careers, id-based jobdetails URL.",
+  "seeded_from": "user-provided"
+ },
+ "mckinsey_intern": {
+  "url": "https://www.mckinsey.com/careers/search-jobs/jobs/associateintern-14918",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "McKinsey corporate careers search-jobs path.",
+  "seeded_from": "user-provided"
+ },
+ "nvidia_careers": {
+  "url": "https://jobs.nvidia.com/careers?start=0&pid=893397966330&sort_by=timestamp",
+  "label": null,
+  "last_verified": "2026-10-02",
+  "note": "NVIDIA careers listing URL, not a single posting. Reach may succeed while the wrong thing is returned - exactly the seam this entry cannot judge.",
+  "seeded_from": "user-provided"
+ }
+}

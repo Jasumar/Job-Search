@@ -1,0 +1,25 @@
+use_default_settings:
+  engines:
+    keep_only:
+      - duckduckgo
+      - yahoo
+
+server:
+  bind_address: "0.0.0.0"
+  port: 8080
+  secret_key: "jobsearch-local-dev-secret"
+  limiter: false
+
+engines:
+  - name: duckduckgo
+    disabled: false
+  - name: yahoo
+    disabled: false
+
+search:
+  formats:
+    - html
+    - json
+
+redis:
+  url: ""

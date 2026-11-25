@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "source": "benchmarks/benchmarks_setup.md (user paste sheet)",
+    "converted": "2026-10-09",
+    "stratum_targets": "large/medium ~14, startup ~3, fi_sme ~3 (sheet suggestion)",
+    "target": "families 1-5 expected 100% on A1-A2 labels; family 6 is hard and expected lower",
+    "merged": "position_extraction + company_discovery reconciled on main; aliases moved here from company_discovery/score_b1.py"
+  },
+  "companies": {
+    "nvidia": {
+      "name": "NVIDIA Corporation",
+      "stratum": "large",
+      "country": "US",
+      "family": 1,
+      "careers_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "open_positions_url": "https://jobs.nvidia.com/careers",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "nvidia"
+      ]
+    },
+    "apple": {
+      "name": "Apple Inc.",
+      "stratum": "large",
+      "country": "US",
+      "family": 1,
+      "careers_url": "https://www.apple.com/careers/us/",
+      "open_positions_url": "https://jobs.apple.com/en-us/search",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "apple"
+      ]
+    },
+    "google": {
+      "name": "Google LLC (Alphabet Inc.)",
+      "stratum": "large",
+      "country": "US",
+      "family": 1,
+      "careers_url": "https://www.google.com/about/careers/applications/",
+      "open_positions_url": "https://www.google.com/about/careers/applications/jobs/results",
+      "open_positions_kind": "employer",
+      "note": "Google LLC is the operating company; Alphabet Inc. is its parent.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "google",
+        "alphabet"
+      ]
+    },
+    "microsoft": {
+      "name": "Microsoft Corporation",
+      "stratum": "large",
+      "country": "US",
+      "family": 1,
+      "careers_url": "https://careers.microsoft.com/v2/global/en/home.html",
+      "open_positions_url": "https://apply.careers.microsoft.com/careers",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "microsoft"
+      ]
+    },
+    "amazon": {
+      "name": "Amazon.com, Inc.",
+      "stratum": "large",
+      "country": "US",
+      "family": 1,
+      "careers_url": "https://www.amazon.jobs/en/",
+      "open_positions_url": "https://www.amazon.jobs/en/search?base_query=&loc_query=",
+      "open_positions_kind": "employer",
+      "note": "Includes AWS and other Amazon business units.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "amazon"
+      ]
+    },
+    "samsung": {
+      "name": "Samsung Electronics Co., Ltd. (Samsung Group)",
+      "stratum": "large",
+      "country": "KR",
+      "family": 1,
+      "careers_url": "https://www.samsungcareers.com/?lang=en",
+      "open_positions_url": "https://www.samsungcareers.com/insight/find",
+      "open_positions_kind": "employer",
+      "note": "Shared Samsung Group careers portal covering multiple affiliates, not only Samsung Electronics.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "samsung"
+      ]
+    },
+    "nordea": {
+      "name": "Nordea Bank Abp",
+      "stratum": "large",
+      "country": "FI",
+      "family": 2,
+      "careers_url": "https://www.nordea.com/en/careers",
+      "open_positions_url": "https://www.nordea.com/en/careers/open-jobs",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "nordea"
+      ]
+    },
+    "op_pohjola": {
+      "name": "OP Pohjola (OP Osuuskunta)",
+      "stratum": "large",
+      "country": "FI",
+      "family": 2,
+      "careers_url": "https://op-careers.fi/?locale=en_GB",
+      "open_positions_url": "https://op-careers.fi/search/?q=",
+      "open_positions_kind": "ats_delegated",
+      "note": "Formerly OP Financial Group. OP Pohjola is a group of entities; OP Osuuskunta is its central cooperative. Careers platform uses SAP SuccessFactors.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "op pohjola",
+        "op osuuskunta",
+        "osuuspankki",
+        "op financial"
+      ]
+    },
+    "danske_bank": {
+      "name": "Danske Bank A/S",
+      "stratum": "large",
+      "country": "DK",
+      "family": 2,
+      "careers_url": "https://danskebank.com/careers",
+      "open_positions_url": "https://ejqi.fa.ocs.oraclecloud.eu/hcmUI/CandidateExperience/en/sites/CX_1001/jobs",
+      "open_positions_kind": "ats_delegated",
+      "note": "Headquartered in Denmark but operates in Finland. Jobs portal uses Oracle Cloud HCM.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "danske bank",
+        "danske"
+      ]
+    },
+    "neste": {
+      "name": "Neste Oyj",
+      "stratum": "large",
+      "country": "FI",
+      "family": 3,
+      "careers_url": "https://www.neste.com/en-us/about-neste/people-and-careers/work-with-us",
+      "open_positions_url": "https://jobs.neste.com/search",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "neste"
+      ]
+    },
+    "nokia": {
+      "name": "Nokia Oyj",
+      "stratum": "large",
+      "country": "FI",
+      "family": 3,
+      "careers_url": "https://www.nokia.com/careers/",
+      "open_positions_url": "https://jobs.nokia.com/en/sites/CX_1/jobs?mode=location",
+      "open_positions_kind": "ats_delegated",
+      "note": "Careers portal uses Oracle Cloud HCM on a Nokia-branded domain.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "nokia"
+      ]
+    },
+    "kone": {
+      "name": "KONE Oyj",
+      "stratum": "large",
+      "country": "FI",
+      "family": 3,
+      "careers_url": "https://www.kone.com/global/en/careers.html",
+      "open_positions_url": "https://kone.wd3.myworkdayjobs.com/en-US/Careers",
+      "open_positions_kind": "ats_delegated",
+      "note": "Job listings are hosted on Workday ATS.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "kone"
+      ]
+    },
+    "kesko": {
+      "name": "Kesko Oyj",
+      "stratum": "large",
+      "country": "FI",
+      "family": 3,
+      "careers_url": "https://www.kesko.fi/en/Careers/",
+      "open_positions_url": "https://www.kesko.fi/en/Careers/vacancies/",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "kesko"
+      ]
+    },
+    "iceye": {
+      "name": "ICEYE Oy",
+      "stratum": "startup",
+      "country": "FI",
+      "family": 4,
+      "careers_url": "https://www.iceye.com/careers",
+      "open_positions_url": "https://www.iceye.com/careers/positions",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "iceye"
+      ]
+    },
+    "oura": {
+      "name": "Oura Health Oy",
+      "stratum": "startup",
+      "country": "FI",
+      "family": 4,
+      "careers_url": "https://ouraring.com/careers",
+      "open_positions_url": "https://job-boards.greenhouse.io/oura",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "oura"
+      ]
+    },
+    "iqm": {
+      "name": "IQM Quantum Computers Oyj",
+      "stratum": "medium",
+      "country": "FI",
+      "family": 4,
+      "careers_url": "https://iqm.tech/careers/",
+      "open_positions_url": "https://iqm.tech/careers/join-us/",
+      "open_positions_kind": "employer",
+      "note": "Previously IQM Finland Oy. Publicly listed in 2026; retained in this query family because of its startup origins. Individual job applications use Teamtailor.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "iqm"
+      ]
+    },
+    "nestai": {
+      "name": "NestAI Oy",
+      "stratum": "startup",
+      "country": "FI",
+      "family": 4,
+      "careers_url": "https://www.nestai.com/careers",
+      "open_positions_url": "https://www.nestai.com/open-positions",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "nestai"
+      ]
+    },
+    "bolt": {
+      "name": "Bolt Technology OÜ",
+      "stratum": "startup",
+      "country": "EE",
+      "family": 5,
+      "careers_url": "https://bolt.eu/en/careers/positions/",
+      "open_positions_url": "https://bolt.eu/en/careers/positions/",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "bolt"
+      ]
+    },
+    "digia": {
+      "name": "Digia Oyj",
+      "stratum": "medium",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://digia.com/en/careers",
+      "open_positions_url": "https://digia.com/en/careers#open-positions",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "digia"
+      ]
+    },
+    "vincit": {
+      "name": "Vincit Oyj",
+      "stratum": "medium",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://www.vincit.com/careers",
+      "open_positions_url": "https://vincitoyj.teamtailor.com/jobs",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "vincit"
+      ]
+    },
+    "lemonsoft": {
+      "name": "Lemonsoft Oyj",
+      "stratum": "fi_sme",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://rekry.lemonsoft.eu/",
+      "open_positions_url": "https://rekry.lemonsoft.eu/jobs",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "lemonsoft"
+      ]
+    },
+    "exove": {
+      "name": "Exove Oy",
+      "stratum": "fi_sme",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://www.exove.com/careers/",
+      "open_positions_url": "https://www.exove.com/careers/",
+      "open_positions_kind": "employer",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "exove"
+      ]
+    },
+    "evermade": {
+      "name": "Evermade Oy",
+      "stratum": "fi_sme",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://www.evermade.fi/about/careers/",
+      "open_positions_url": "https://careers.evermade.fi/#jobs",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "evermade"
+      ]
+    },
+    "wapice": {
+      "name": "Wapice Oy",
+      "stratum": "medium",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://wapice.com/careers/",
+      "open_positions_url": "https://wapice.com/careers/",
+      "open_positions_kind": "employer",
+      "note": "Open positions section is embedded in the employer page; recruitment uses Teamtailor.",
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "wapice"
+      ]
+    },
+    "netum": {
+      "name": "Netum Group Oyj",
+      "stratum": "medium",
+      "country": "FI",
+      "family": 6,
+      "careers_url": "https://www.netum.fi/en/jobs/",
+      "open_positions_url": "https://tyopaikat.netum.fi/en#jobs",
+      "open_positions_kind": "ats_delegated",
+      "note": null,
+      "last_verified": "2026-10-09",
+      "verified": true,
+      "aliases": [
+        "netum"
+      ]
+    }
+  }
+}

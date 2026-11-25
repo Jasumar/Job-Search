@@ -1,0 +1,34 @@
+[
+  {
+    "name": "fi_avoimet_tyopaikat",
+    "file": "fi_landing.html",
+    "base_url": "https://www.acme.fi/",
+    "entry_path": "/avoimet-tyopaikat",
+    "label_prefix": "Avoimet työpaikat",
+    "decoy_path": "/ura"
+  },
+  {
+    "name": "sv_lediga_jobb",
+    "file": "sv_landing.html",
+    "base_url": "https://www.acme.se/",
+    "entry_path": "/lediga-jobb",
+    "label_prefix": "Lediga jobb",
+    "decoy_path": "/karriar"
+  },
+  {
+    "name": "de_offene_stellen",
+    "file": "de_landing.html",
+    "base_url": "https://www.acme.de/",
+    "entry_path": "/karriere/offene-stellen",
+    "label_prefix": "Offene Stellen",
+    "decoy_path": "/karriere"
+  },
+  {
+    "name": "en_jobs",
+    "file": "en_landing.html",
+    "base_url": "https://www.acme.com/",
+    "entry_path": "/careers/jobs",
+    "label_prefix": "Jobs",
+    "decoy_path": "/careers"
+  }
+]

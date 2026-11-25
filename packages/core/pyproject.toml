@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jobsearch-core"
+version = "0.1.0"
+description = "Local-first job search agent for European tech roles (shared core)"
+requires-python = ">=3.11"
+license = { text = "All rights reserved" }
+dependencies = [
+    "curl_cffi>=0.7",
+    "httpx>=0.27",
+    "beautifulsoup4>=4.12",
+    "sqlalchemy>=2.0",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "openrouter>=1.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "rich>=13.0",
+    "click>=8.0",
+    "pypdf>=5.0",
+    "alembic>=1.19.2",
+    "python-docx>=1.2.0",
+]
+
+[project.optional-dependencies]
+browser = [
+    "playwright>=1.62",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+    "respx>=0.22",
+    "ddgs>=0.5",
+]
+
+[project.scripts]
+jobsearch = "jobsearch_core.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobsearch_core"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short -q"

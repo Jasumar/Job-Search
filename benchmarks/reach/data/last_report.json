@@ -1,0 +1,334 @@
+{
+ "benchmark": "reach_rate",
+ "ran_at": "2026-10-09T10:44:51.083384+00:00",
+ "stale_labels": [],
+ "aggregate": {
+  "cases": 17,
+  "scored_cases": 6,
+  "reachable": 2,
+  "reach_rate": 0.333,
+  "rendered": 3,
+  "rendered_rate": 0.5,
+  "unscored_cases": 11,
+  "unscored": {
+   "unlabelled": [
+    "siemens_login_wall_2",
+    "google_gti",
+    "nordea_safekeeping",
+    "microsoft_careers",
+    "iceye_ashby",
+    "rippling_chess",
+    "accenture_security",
+    "mckinsey_intern",
+    "nvidia_careers"
+   ],
+   "not_a_posting": [
+    "siemens_faq_page",
+    "brightly_services_page"
+   ],
+   "other": []
+  },
+  "by_obstacle": {
+   "reachable": 11,
+   "too_thin": 3,
+   "transport_error": 2,
+   "blocked": 1
+  },
+  "llm_calls": 0,
+  "cache_bypassed": true,
+  "notes": {}
+ },
+ "per_case": {
+  "nokia_plain_1": {
+   "predicted": true,
+   "scored": true,
+   "detail": {
+    "url": "https://jobs.nokia.com/en/sites/CX_1/job/30607",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "render",
+    "desc_len": 4140,
+    "memoized_at_start": false,
+    "preview": "View More Jobs 5G gNB Layer 2 and Layer 3 Developer United States (Hybrid) Join our Strategy and Technology Space Communication Solutions te",
+    "labelled_obstacle": "reachable",
+    "note": "Employer careers site, server-rendered posting body."
+   },
+   "label": true,
+   "correct": true
+  },
+  "nokia_plain_2": {
+   "predicted": false,
+   "scored": true,
+   "detail": {
+    "url": "https://jobs.nokia.com/en/sites/CX_1/job/33254",
+    "reachable": false,
+    "obstacle": "too_thin",
+    "tier": "render",
+    "desc_len": 76,
+    "memoized_at_start": true,
+    "preview": "View More Jobs This job is no longer available. You may also View All Jobs .",
+    "labelled_obstacle": "too_thin",
+    "note": "Corrected 2026-10-02 from reachable. Live fetch returns 'View More Jobs / This job is no longer available' (76 chars) - the posting is gone, transport worked. DB row 4 status=rejected agrees. A dead posting URL is NOT a reach failure."
+   },
+   "label": false,
+   "correct": true
+  },
+  "ashby_plain_1": {
+   "predicted": true,
+   "scored": true,
+   "detail": {
+    "url": "https://jobs.ashbyhq.com/anyone-ai/e795562e-4cfb-4903-bcca-6edfc4aca554",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "render",
+    "desc_len": 2428,
+    "memoized_at_start": false,
+    "preview": "Mathematics Expert (LATAM & Europe) Location Argentina - Fully Remote; Brazil; Colombia - Fully Remote; Denmark; Ecuador - Fully Remote; Fra",
+    "labelled_obstacle": "reachable",
+    "note": "Ashby-hosted board, server-rendered."
+   },
+   "label": true,
+   "correct": true
+  },
+  "builtin_plain_1": {
+   "predicted": false,
+   "scored": true,
+   "detail": {
+    "url": "https://builtin.com/job/recuiter/10231541",
+    "reachable": false,
+    "obstacle": "transport_error",
+    "tier": "simple",
+    "desc_len": 0,
+    "memoized_at_start": false,
+    "preview": "",
+    "error": "RuntimeError: Unusable content from https://builtin.com/job/recuiter/10231541 after browser render",
+    "labelled_obstacle": "transport_error",
+    "note": "Corrected 2026-10-02 from reachable. Live fetch raises; both tiers fail. DB row 479 holds a 6954-char description captured earlier, so the site did work once - the URL is now failing. Note builtin.com/job/recuiter/... is itself a malformed URL (typo in the real one), which is likely the cause. Unscored: a transport error is not a property of the site."
+   },
+   "label": false,
+   "correct": true
+  },
+  "duckduckgo_pdf": {
+   "predicted": false,
+   "scored": true,
+   "detail": {
+    "url": "https://duckduckgo.com/static-assets/files/pages/careers/DuckDuckGo-Recruiting-Privacy-Policy-effective-September-30-2025.pdf",
+    "reachable": false,
+    "obstacle": "too_thin",
+    "tier": "simple",
+    "desc_len": 0,
+    "memoized_at_start": false,
+    "preview": "",
+    "labelled_obstacle": "binary_document",
+    "note": "Reaching this at all is the bug: a privacy PDF was mined as a posting. Confirms the live DB's binary-description row is a real defect, not a label artefact."
+   },
+   "label": false,
+   "correct": true
+  },
+  "siemens_login_wall": {
+   "predicted": false,
+   "scored": true,
+   "detail": {
+    "url": "https://jobs.siemens.com/en_US/externaljobs/AIRecommendations",
+    "reachable": false,
+    "obstacle": "too_thin",
+    "tier": "simple",
+    "desc_len": 0,
+    "memoized_at_start": false,
+    "preview": "",
+    "labelled_obstacle": "login_wall",
+    "note": "Live probe returned 'Already registered? Login' with a 763-char body. 763 chars clears every length threshold in the transport and is stored as a description."
+   },
+   "label": false,
+   "correct": true
+  },
+  "siemens_login_wall_2": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://jobs.siemens.com/fr_FR/externaljobs",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 1372,
+    "memoized_at_start": false,
+    "preview": "Votre compte a été créé avec succès. Pour activer votre compte et continuer, veuillez vérifier votre adresse e-mail en utilisant le lien fig",
+    "labelled_obstacle": null,
+    "note": "Unlabelled 2026-10-02. French locale, 1372 chars, reads as an account verification notice, not a login wall. Not a posting URL at all -> should be relabelled not_a_posting or dropped. Left for the user's hand."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "siemens_faq_page": {
+   "predicted": "reachable",
+   "scored": false,
+   "detail": {
+    "url": "https://www.siemens.com/global/en/company/jobs/faq.html",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 20783,
+    "memoized_at_start": false,
+    "preview": "FAQs & Support Ready to start your future with us, but you still have a few questions? We’ve got you covered. We’ve compiled answers to a ra",
+    "labelled_obstacle": "not_a_posting",
+    "note": "Employer FAQ page, 20783 chars, reads as a perfectly good posting to any length-based check. Excluded from scoring on purpose - it belongs to discovery and to suite entry 5, not to transport."
+   },
+   "label": "not_a_posting",
+   "unscored_reason": "not_a_posting: transport cannot judge this"
+  },
+  "brightly_services_page": {
+   "predicted": "blocked",
+   "scored": false,
+   "detail": {
+    "url": "https://www.brightly.fi/services/enterprise-data-ai-platforms",
+    "reachable": false,
+    "obstacle": "blocked",
+    "tier": "simple",
+    "desc_len": 4792,
+    "memoized_at_start": false,
+    "preview": "Enterprise data & AI solutions The foundation your business can stand on We help enterprises create reusable data products, put AI solutions",
+    "labelled_obstacle": "not_a_posting",
+    "note": "Marketing page with 5158 chars. Same failure mode as the FAQ page: reachable in the transport sense, wrong in the semantic sense."
+   },
+   "label": "not_a_posting",
+   "unscored_reason": "not_a_posting: transport cannot judge this"
+  },
+  "google_gti": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://www.google.com/about/careers/applications/jobs/results/137787779495928518-software-engineer-ii-gti-threat-intelligence?target_level=EARLY",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 5141,
+    "memoized_at_start": false,
+    "preview": "Software Engineer II, GTI Threat Intelligence share Share Software Engineer II, GTI Threat Intelligence link Copy link email Email a friend ",
+    "labelled_obstacle": null,
+    "note": "Google Careers. Landing-style SPA with a job-id in the path."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "nordea_safekeeping": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://careers.nordea.com/job/Gda%C5%84sk-Expert-Java-Developer-and-Tech-Lead%2C-Safekeeping-team-80-309/1424734033/?feedId=451033&amp;utm_source=CareerSite",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 6795,
+    "memoized_at_start": false,
+    "preview": "Search by Keyword Show More Options Loading... Custom Field 2 All Clear Select how often (in days) to receive an alert: Create Alert × Selec",
+    "labelled_obstacle": null,
+    "note": "Nordea, SuccessFactors-style board. Note the &amp; in the stored URL."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "microsoft_careers": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://apply.careers.microsoft.com/careers?start=0&pid=1970393557022418&sort_by=timestamp",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 483725,
+    "memoized_at_start": false,
+    "preview": "{\"themeOptions\": {\"customTheme\": {\"varTheme\": {\"accordion-body-text-color\": \"#646464\", \"check-box-border-color\": \"#646464\", \"check-box-check",
+    "labelled_obstacle": null,
+    "note": "Microsoft apply site, listing URL rather than a posting."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "iceye_ashby": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://jobs.ashbyhq.com/iceye/c51065ca-6ecb-4ce9-9dcb-d48b397dabdd",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "render",
+    "desc_len": 5707,
+    "memoized_at_start": true,
+    "preview": "Electronics Engineer, Radar Payload Team Location Espoo Employment Type Full time Location Type Hybrid Department Engineering Title : Electr",
+    "labelled_obstacle": null,
+    "note": "Ashby board, same platform as the seeded ashby case but a different tenant build."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "rippling_chess": {
+   "predicted": false,
+   "scored": false,
+   "detail": {
+    "url": "https://ats.rippling.com/en-GB/chess/jobs/a3454ffa-c244-4d38-9357-45d895718899",
+    "reachable": false,
+    "obstacle": "transport_error",
+    "tier": "simple",
+    "desc_len": 0,
+    "memoized_at_start": false,
+    "preview": "",
+    "error": "RuntimeError: Unusable content from https://ats.rippling.com/en-GB/chess/jobs/a3454ffa-c244-4d38-9357-45d895718899 after browser render",
+    "labelled_obstacle": null,
+    "note": "Rippling ATS, en-GB locale path."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "accenture_security": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://www.accenture.com/gb-en/careers/jobdetails?id=R00311068_en&title=Security+Consultant+-+H%26PS",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 7062,
+    "memoized_at_start": false,
+    "preview": "Careers Expand Menu Security Consultant - H&PS Security Consulting Team Lead/Consultant | Mid-Level | Full time Job No. R00311068 | Multiple",
+    "labelled_obstacle": null,
+    "note": "Accenture corporate careers, id-based jobdetails URL."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "mckinsey_intern": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://www.mckinsey.com/careers/search-jobs/jobs/associateintern-14918",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 5923,
+    "memoized_at_start": false,
+    "preview": "Abu Dhabi Amsterdam Athens Atlanta Austin Bangkok Barcelona Beijing Bengaluru Berlin Bogota Boston Brussels Buenos Aires Calgary Casablanca ",
+    "labelled_obstacle": null,
+    "note": "McKinsey corporate careers search-jobs path."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  },
+  "nvidia_careers": {
+   "predicted": true,
+   "scored": false,
+   "detail": {
+    "url": "https://jobs.nvidia.com/careers?start=0&pid=893397966330&sort_by=timestamp",
+    "reachable": true,
+    "obstacle": "reachable",
+    "tier": "simple",
+    "desc_len": 131535,
+    "memoized_at_start": false,
+    "preview": "{\"themeOptions\": {\"name\": \"PCS Default\", \"customTheme\": {\"varTheme\": {\"primary-color-100\": \"#000000\", \"primary-color-90\": \"#0d0d0d\", \"primar",
+    "labelled_obstacle": null,
+    "note": "NVIDIA careers listing URL, not a single posting. Reach may succeed while the wrong thing is returned - exactly the seam this entry cannot judge."
+   },
+   "label": false,
+   "unscored_reason": "unlabelled"
+  }
+ }
+}

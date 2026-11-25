@@ -1,0 +1,120 @@
+# Deterministic include and reject rules and weighted scoring configuration.
+# Include rules run first: a job must match at least one positive family
+# (across combined title + description) to be retained, otherwise it is dropped.
+# Reject rules then apply in order; a match on any reject rule drops the job.
+# Include patterns are lowercase regexes matched against lowercased text.
+
+reject_rules:
+  # Keywords that indicate clear senior/staff/lead level
+  - field: title
+    pattern: "(?i)\\b(staff|principal|distinguished|director|head of|vp|vice president|chief|sre|engineering manager|cto)\\b"
+    reason: "senior_or_leadership_keyword"
+
+  - field: title
+    pattern: "(?i)\\bsenior|sr\\.?\\b"
+    reason: "explicit_senior_title"
+
+  - field: description
+    pattern: "(?i)\\b(10\\+|8\\+|7\\+)\\s*(\\+\\s*)?years"
+    reason: "high_experience_requirement"
+
+  - field: location
+    pattern: "(?i)\\b(united states|usa|canada|australia|india|bangkok|singapore|hong kong|dubai|japan|china|south korea|brazil|mexico|argentina|chile|south africa|kenya|nigeria|philippines|indonesia|vietnam|thailand|malaysia|ukraine)\\b"
+    reason: "outside_target_region"
+
+  - field: description
+    pattern: "(?i)\\b(must be a citizen|security clearance|top secret|ts/sci|must be eligible for clearance|must hold a valid.*work permit|no visa sponsorship|no sponsorship)\\b"
+    reason: "citizenship_or_clearance_required"
+
+  - field: description
+    pattern: "(?i)\\b(frontend|front.end|react|angular|vue|mobile developer|ios developer|android developer|embedded|firmware|fpga|hardware engineer|mechanical engineer|civil engineer|electrical engineer|game developer|unity|unreal|blockchain|solidity|web3|systems administrator|helpdesk|technical support)\\b"
+    reason: "wrong_role_family"
+
+  - field: description
+    pattern: "(?i)\\b(hybrid in|onsite in|on-site in).*(london|paris|madrid|barcelona|rome|milan|prague|vienna|bratislava)\\b"
+    reason: "onsite_outside_target_markets"
+
+  # Dutch-language postings are often local-only and not English-friendly
+  - field: description
+    pattern: "(?i)^(?:wij|onze|functie|functieomschrijving|wat ga je doen|wat vragen wij|wat bieden wij)"
+    reason: "non_english_posting"
+
+include_rules:
+  # Positive role-family gate. Families stay broad by design so the gate is
+  # inclusive rather than a narrow keyword match. Seniority and exact level
+  # remain separate reject/scoring concerns. Known tradeoff: roles that fall
+  # between the positive and negative definitions may be dropped.
+
+  - family: backend_python
+    patterns:
+      - '\bback[- ]?end\b'
+      - '\bserver[- ]?side\b'
+      - '\bpython\b'
+      - '\b(django|flask|fastapi|celery|asyncio|pydantic)\b'
+      - '\bnode(\.js)?\b'
+      - '\b(java|scala|kotlin|go|golang|rust)\b'
+      - '\b(spring ?boot|quarkus)\b'
+      - '\bapi (development|developer|engineer)\b'
+      - '\bmicroservices?\b'
+      - '\bfull[- ]?stack\b'
+
+  - family: data_analytics
+    patterns:
+      - '\bdata (engineer|engineering|scientist|science|analyst|analysis|pipeline|platform|architect)\b'
+      - '\b(etl|dwh|data warehouse|warehousing)\b'
+      - '\banalytics?\b'
+      - '\bsql\b'
+      - '\bbusiness intelligence\b'
+      - '\bdashboard(s)?\b'
+      - '\b(airflow|dbt|spark|kafka|databricks|snowflake|bigquery)\b'
+      - '\b(power bi|tableau|looker|quicksight)\b'
+
+  - family: ai_llm
+    patterns:
+      - '\b(ai|artificial intelligence)\b'
+      - '\bllms?\b'
+      - '\blarge language models?\b'
+      - '\bmachine learning\b'
+      - '\bdeep learning\b'
+      - '\bnlp\b'
+      - '\b(retrieval[- ]?augmented|rag)\b'
+      - '\bprompt\w*\b'
+      - '\bagents?\b'
+      - '\bgenerative ai\b'
+      - '\b(tensorflow|pytorch|transformers?|openai|anthropic|claude|langchain)\b'
+
+  - family: automation_devops
+    patterns:
+      - '\bdevops\b'
+      - '\bautomation (engineer|developer|software|testing|test|qa)\b'
+      - '\b(ci/cd|ci cd)\b'
+      - '\binfrastructure (engineer|engineering|automation|as code)\b'
+      - '\bplatform (engineer|engineering|team)\b'
+      - '\binternal tools?\b'
+      - '\b(developer tools|devtools)\b'
+      - '\bsite reliability\b'
+      - '\b(terraform|ansible|kubernetes|k8s|helm|docker)\b'
+      - '\bcloud (engineer|architect|platform|native)\b'
+      - '\brelease engineer\b'
+      - '\bobservability\b'
+
+  - family: technical_consulting
+    patterns:
+      - '\b(technical|software|data|cloud|ai|digital|it|technology)\s+consult\w*\b'
+      - '\bprofessional services\b'
+      - '\bsolutions? (engineer|architect|consultant|owner)\b'
+      - '\bclient[- ]?facing\b'
+      - '\bsystems? (integrator|architect)\b'
+      - '\b(pre[- ]?sales|presales)\b'
+      - '\btechnical account manager\b'
+
+  # General software engineering. Junior and generalist titles such as
+  # "Software Engineer" or "Junior Developer" often do not name a specific
+  # backend/data/AI stack anywhere in the posting, so they were dropped by the
+  # include gate despite being the candidate's main target. Full-stack roles
+  # already match backend_python via '\bfull[- ]?stack\b'. Seniority and
+  # wrong-family roles are still handled by reject_rules below.
+  - family: software_engineering
+    patterns:
+      - '\bsoftware (engineer|developer|engineering|development)\b'
+      - '\b(junior|associate|entry[- ]?level|trainee|graduate)\b\s+\bdeveloper\b'

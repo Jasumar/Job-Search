@@ -1,0 +1,243 @@
+{
+  "_meta": {
+    "source": "benchmarks/benchmarks_setup.md",
+    "converted": "2026-10-09",
+    "note": "expected = company ids from companies.json; all labels hand-verified by user 2026-10-09; family 6 is a hard, low-expectation stratum"
+  },
+  "queries": [
+    {
+      "family": 1,
+      "query": "largest technology companies in the world",
+      "expected": [
+        "nvidia",
+        "apple",
+        "google",
+        "microsoft",
+        "amazon",
+        "samsung"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 1,
+      "query": "biggest tech companies by market capitalization",
+      "expected": [
+        "nvidia",
+        "apple",
+        "google",
+        "microsoft",
+        "amazon"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 1,
+      "query": "top global technology companies by revenue",
+      "expected": [
+        "samsung",
+        "apple",
+        "amazon",
+        "microsoft",
+        "google"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 2,
+      "query": "largest finance companies in Finland",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 2,
+      "query": "suurimmat finanssiyritykset Suomessa",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 2,
+      "query": "biggest banks in Finland",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 3,
+      "query": "largest companies in Finland by revenue",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 3,
+      "query": "suurimmat yritykset Suomessa liikevaihto",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 3,
+      "query": "biggest Finnish corporations list",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 4,
+      "query": "best startups in Finland",
+      "expected": [
+        "iceye",
+        "oura",
+        "iqm",
+        "nestai"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 4,
+      "query": "suomalaiset startup-yritykset",
+      "expected": [
+        "iceye",
+        "oura",
+        "iqm",
+        "nestai"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 4,
+      "query": "Finnish deep tech startups list",
+      "expected": [
+        "iceye",
+        "iqm",
+        "nestai"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 5,
+      "query": "largest Estonian startups",
+      "expected": [
+        "bolt"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 5,
+      "query": "Estonian tech startups unicorns",
+      "expected": [
+        "bolt"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 5,
+      "query": "Tallinn tech startups list",
+      "expected": [
+        "bolt"
+      ],
+      "verified": true,
+      "note": null,
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 6,
+      "query": "pienet ohjelmistotalot Oulu",
+      "expected": [
+        "digia",
+        "vincit",
+        "lemonsoft",
+        "exove",
+        "evermade",
+        "wapice",
+        "netum"
+      ],
+      "verified": true,
+      "note": "hard stratum: low score expected, kept for interest, not a pass bar",
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 6,
+      "query": "ohjelmistoyritykset Turku",
+      "expected": [
+        "digia",
+        "vincit",
+        "lemonsoft",
+        "exove",
+        "evermade",
+        "wapice",
+        "netum"
+      ],
+      "verified": true,
+      "note": "hard stratum: low score expected, kept for interest, not a pass bar",
+      "last_verified": "2026-10-09"
+    },
+    {
+      "family": 6,
+      "query": "Finnish software consultancies Oulu Turku",
+      "expected": [
+        "digia",
+        "vincit",
+        "lemonsoft",
+        "exove",
+        "evermade",
+        "wapice",
+        "netum"
+      ],
+      "verified": true,
+      "note": "hard stratum: low score expected, kept for interest, not a pass bar",
+      "last_verified": "2026-10-09"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Secrets and personal data
+.env
+data/
+reports/
+.user_profiles/
+*.db
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Benchmark fixtures are tracked (bare data/ above would exclude them),
+# but snapshots of third-party pages are not.
+!benchmarks/**/data/
+!benchmarks/**/data/**
+benchmarks/funnel/data/snapshots/
+benchmarks/recipe_author/snapshots/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

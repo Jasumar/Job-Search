@@ -1,0 +1,42 @@
+[
+    {
+        "url": "https://example.com/jobs/backend-python",
+        "raw_title": "Backend Python Developer",
+        "raw_company": "SaunaTech Oy",
+        "raw_location": "Helsinki, Finland",
+        "description": "We are looking for a Python developer to build our internal tools platform. You will work with Django, PostgreSQL, and Docker in a small team. 1-2 years of experience is enough if you are eager to learn. Remote-friendly within Finland.",
+        "posted_date": "2 days ago"
+    },
+    {
+        "url": "https://example.com/jobs/senior-staff",
+        "raw_title": "Senior Staff Platform Engineer",
+        "raw_company": "BigScale GmbH",
+        "raw_location": "Berlin, Germany",
+        "description": "10+ years of experience designing distributed systems. You will lead a team of 20 engineers building the next generation platform. Must be a German citizen with security clearance.",
+        "posted_date": "1 week ago"
+    },
+    {
+        "url": "https://example.com/jobs/react-frontend",
+        "raw_title": "React Frontend Developer",
+        "raw_company": "PixelPerfect AB",
+        "raw_location": "Stockholm, Sweden",
+        "description": "Looking for a senior React developer to build our customer-facing dashboard. Experience with TypeScript, Next.js, and Tailwind CSS required.",
+        "posted_date": "3 days ago"
+    },
+    {
+        "url": "https://example.com/jobs/data-engineer",
+        "raw_title": "Data Engineer",
+        "raw_company": "DataFlow OÜ",
+        "raw_location": "Tallinn, Estonia",
+        "description": "Join our data platform team. We use Python, SQL, Airflow, and dbt. You will build ETL pipelines and data warehouses. Experience with cloud platforms (AWS/GCP) is a plus. We offer visa sponsorship for the right candidate.",
+        "posted_date": "yesterday"
+    },
+    {
+        "url": "https://example.com/jobs/ai-tools",
+        "raw_title": "AI/LLM Application Developer",
+        "raw_company": "PromptLabs",
+        "raw_location": "Remote",
+        "description": "Build LLM-powered internal tools for our consulting clients. Python, prompt engineering, RAG pipelines. We care about results, not years of experience. Fully remote with flexible hours.",
+        "posted_date": "today"
+    }
+]

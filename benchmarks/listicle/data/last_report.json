@@ -1,0 +1,642 @@
+{
+ "sites": {
+  "estonia_fintech": "https://fintechbaltic.com/10245/fintechestonia/top-7-fintech-companies-from-estonia-to-follow-in-2025/",
+  "finland_startups": "https://seedtable.com/best-startups-in-finland",
+  "world_largest_tech": "https://companiesmarketcap.com/tech/largest-tech-companies-by-market-cap/",
+  "japan_tech": "https://bullfincher.io/ranking/top-tech-companies-in-japan-by-revenue",
+  "eu_largest_revenue": "https://en.wikipedia.org/wiki/List_of_largest_companies_in_Europe_by_revenue"
+ },
+ "bench_max_companies": 200,
+ "aggregate_recall": 0.449,
+ "per_site": {
+  "estonia_fintech": {
+   "sample_size": 7,
+   "full_gt_size": 7,
+   "extracted_count": 13,
+   "cap_reached": false,
+   "client_rendered": false,
+   "recall_sample": 1.0,
+   "mean_similarity": 1.0,
+   "matched": [
+    {
+     "ground_truth": "Estateguru",
+     "extracted": "Estateguru",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Tuum",
+     "extracted": "Tuum",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Fairown",
+     "extracted": "Fairown",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Mifundo",
+     "extracted": "Mifundo",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Crowdestate",
+     "extracted": "Crowdestate",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Monese",
+     "extracted": "Monese",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Xolo",
+     "extracted": "Xolo",
+     "similarity": 1.0
+    }
+   ],
+   "misses": [],
+   "noise_count": 6,
+   "noise_examples": [
+    "LHV Group",
+    "SweepBank",
+    "Januar",
+    "XYB",
+    "Investec",
+    "Pockit"
+   ],
+   "near_misses": []
+  },
+  "finland_startups": {
+   "sample_size": 10,
+   "full_gt_size": 10,
+   "extracted_count": 25,
+   "cap_reached": false,
+   "client_rendered": false,
+   "recall_sample": 1.0,
+   "mean_similarity": 1.0,
+   "matched": [
+    {
+     "ground_truth": "ICEYE",
+     "extracted": "ICEYE",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Oura",
+     "extracted": "Oura",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "IQM",
+     "extracted": "IQM",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "NestAI",
+     "extracted": "NestAI",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Verda",
+     "extracted": "Verda",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Steady Energy",
+     "extracted": "Steady Energy",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Aiforia",
+     "extracted": "Aiforia",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "ReOrbit",
+     "extracted": "ReOrbit",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Aisti",
+     "extracted": "Aisti",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Kelluu",
+     "extracted": "Kelluu",
+     "similarity": 1.0
+    }
+   ],
+   "misses": [],
+   "noise_count": 15,
+   "noise_examples": [
+    "Volare",
+    "Capalo AI",
+    "Aibidia",
+    "CurifyLabs",
+    "Kasvu Therapeutics",
+    "Treon",
+    "Qutwo",
+    "Quanscient",
+    "WOLT",
+    "Zero",
+    "IXI",
+    "ONEiO",
+    "TILT",
+    "Vexlum",
+    "Skyfora"
+   ],
+   "near_misses": []
+  },
+  "world_largest_tech": {
+   "sample_size": 30,
+   "full_gt_size": 100,
+   "extracted_count": 99,
+   "cap_reached": false,
+   "client_rendered": false,
+   "recall_sample": 1.0,
+   "mean_similarity": 1.0,
+   "matched": [
+    {
+     "ground_truth": "NVIDIA",
+     "extracted": "NVIDIA",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Apple",
+     "extracted": "Apple",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Alphabet (Google)",
+     "extracted": "Alphabet",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Microsoft",
+     "extracted": "Microsoft",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Amazon",
+     "extracted": "Amazon",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "TSMC",
+     "extracted": "TSMC",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "SpaceX",
+     "extracted": "SpaceX",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Meta Platforms (Facebook)",
+     "extracted": "Meta Platforms",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Broadcom",
+     "extracted": "Broadcom",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Tesla",
+     "extracted": "Tesla",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Samsung",
+     "extracted": "Samsung",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Micron Technology",
+     "extracted": "Micron Technology",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "AMD",
+     "extracted": "AMD",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "SK Hynix",
+     "extracted": "SK Hynix",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "ASML",
+     "extracted": "ASML",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Intel",
+     "extracted": "Intel",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Cisco",
+     "extracted": "Cisco",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Netflix",
+     "extracted": "Netflix",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Sandisk",
+     "extracted": "Sandisk",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Marvell Technology",
+     "extracted": "Marvell Technology",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Schneider Electric",
+     "extracted": "Schneider Electric",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Tokyo Electron",
+     "extracted": "Tokyo Electron",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Fortinet",
+     "extracted": "Fortinet",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "ASE Group",
+     "extracted": "ASE Group",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Automatic Data Processing",
+     "extracted": "Automatic Data Processing",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Adobe",
+     "extracted": "Adobe",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Datadog",
+     "extracted": "Datadog",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Intuit",
+     "extracted": "Intuit",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "SMIC",
+     "extracted": "SMIC",
+     "similarity": 1.0
+    },
+    {
+     "ground_truth": "Coherent Corp.",
+     "extracted": "Coherent Corp.",
+     "similarity": 1.0
+    }
+   ],
+   "misses": [],
+   "noise_count": 69,
+   "noise_examples": [
+    "CXMT",
+    "Tencent",
+    "Palantir",
+    "Lam Research",
+    "Oracle",
+    "Applied Materials",
+    "Dell",
+    "Palo Alto Networks",
+    "Arm Holdings",
+    "CrowdStrike",
+    "KLA",
+    "Texas Instruments",
+    "Alibaba",
+    "Arista Networks",
+    "MediaTek"
+   ],
+   "near_misses": []
+  },
+  "japan_tech": {
+   "sample_size": 30,
+   "full_gt_size": 100,
+   "extracted_count": 6,
+   "cap_reached": false,
+   "client_rendered": false,
+   "recall_sample": 0.0,
+   "mean_similarity": 0.0,
+   "matched": [],
+   "misses": [
+    "Sony Group",
+    "Panasonic Holdings",
+    "Canon",
+    "NTT DATA",
+    "Kioxia Holdings",
+    "NEC",
+    "Fujitsu",
+    "TDK",
+    "Tokyo Electron",
+    "Nintendo",
+    "LY",
+    "Murata Manufacturing",
+    "Sharp",
+    "MINEBEA MITSUMI",
+    "Renesas Electronics",
+    "Seiko Epson",
+    "Advantest",
+    "Kaga Electronics",
+    "Shimadzu",
+    "Disco",
+    "Ferrotec Holdings",
+    "Taiyo Yuden",
+    "Trend Micro",
+    "Kokusai Electric",
+    "Ryoden",
+    "Net One Systems",
+    "Japan Business Systems",
+    "mixi",
+    "Tokyo Seimitsu",
+    "SHIFT"
+   ],
+   "noise_count": 6,
+   "noise_examples": [
+    "Caterpillar",
+    "Apple",
+    "NVIDIA Corporation",
+    "Microsoft Corporation",
+    "Amazon.com",
+    "Alphabet (Google)"
+   ],
+   "near_misses": [
+    {
+     "ground_truth": "Sony Group",
+     "best_candidate": "Amazon.com",
+     "similarity": 0.4
+    },
+    {
+     "ground_truth": "Panasonic Holdings",
+     "best_candidate": "Apple",
+     "similarity": 0.174
+    },
+    {
+     "ground_truth": "Canon",
+     "best_candidate": "Caterpillar",
+     "similarity": 0.25
+    },
+    {
+     "ground_truth": "NTT DATA",
+     "best_candidate": "Alphabet (Google)",
+     "similarity": 0.125
+    }
+   ]
+  },
+  "eu_largest_revenue": {
+   "sample_size": 30,
+   "full_gt_size": 99,
+   "extracted_count": 5,
+   "cap_reached": false,
+   "client_rendered": false,
+   "recall_sample": 0.033,
+   "mean_similarity": 1.0,
+   "matched": [
+    {
+     "ground_truth": "Deutsche Telekom",
+     "extracted": "Deutsche Telekom",
+     "similarity": 1.0
+    }
+   ],
+   "misses": [
+    "Volkswagen",
+    "Shell",
+    "TotalEnergies",
+    "Glencore",
+    "BP",
+    "Stellantis",
+    "BMW",
+    "Mercedes-Benz Group",
+    "Électricité de France",
+    "Banco Santander",
+    "BNP Paribas",
+    "HSBC",
+    "Uniper",
+    "Allianz",
+    "Rosneft",
+    "E.ON",
+    "Crédit Agricole",
+    "Engie",
+    "Vinci",
+    "Airbus",
+    "Lloyds Banking Group",
+    "Munich Re",
+    "ING",
+    "Edeka",
+    "Volvo",
+    "Phoenix Pharmahandel",
+    "Chubb",
+    "Unédic",
+    "Talanx"
+   ],
+   "noise_count": 4,
+   "noise_examples": [
+    "Accenture",
+    "Vodafone",
+    "Telefónica",
+    "Orange S.A."
+   ],
+   "near_misses": [
+    {
+     "ground_truth": "Volkswagen",
+     "best_candidate": "Vodafone",
+     "similarity": 0.444
+    },
+    {
+     "ground_truth": "Shell",
+     "best_candidate": "Telefónica",
+     "similarity": 0.267
+    },
+    {
+     "ground_truth": "TotalEnergies",
+     "best_candidate": "Accenture",
+     "similarity": 0.364
+    },
+    {
+     "ground_truth": "Glencore",
+     "best_candidate": "Orange S.A.",
+     "similarity": 0.333
+    }
+   ]
+  }
+ },
+ "client_rendered_sites": [],
+ "extracted_raw": {
+  "estonia_fintech": [
+   "Estateguru",
+   "Tuum",
+   "LHV Group",
+   "SweepBank",
+   "Januar",
+   "Fairown",
+   "Mifundo",
+   "Crowdestate",
+   "Monese",
+   "XYB",
+   "Investec",
+   "Pockit",
+   "Xolo"
+  ],
+  "finland_startups": [
+   "ICEYE",
+   "Oura",
+   "Verda",
+   "IQM",
+   "NestAI",
+   "Aiforia",
+   "Steady Energy",
+   "Kelluu",
+   "ReOrbit",
+   "Aisti",
+   "Volare",
+   "Capalo AI",
+   "Aibidia",
+   "CurifyLabs",
+   "Kasvu Therapeutics",
+   "Treon",
+   "Qutwo",
+   "Quanscient",
+   "WOLT",
+   "Zero",
+   "IXI",
+   "ONEiO",
+   "TILT",
+   "Vexlum",
+   "Skyfora"
+  ],
+  "world_largest_tech": [
+   "NVIDIA",
+   "Apple",
+   "Alphabet",
+   "Microsoft",
+   "Amazon",
+   "TSMC",
+   "SpaceX",
+   "Meta Platforms",
+   "Broadcom",
+   "Tesla",
+   "Samsung",
+   "Micron Technology",
+   "AMD",
+   "SK Hynix",
+   "ASML",
+   "Intel",
+   "CXMT",
+   "Tencent",
+   "Palantir",
+   "Cisco",
+   "Lam Research",
+   "Oracle",
+   "Applied Materials",
+   "Dell",
+   "Palo Alto Networks",
+   "Arm Holdings",
+   "Netflix",
+   "CrowdStrike",
+   "KLA",
+   "Texas Instruments",
+   "Alibaba",
+   "Arista Networks",
+   "Sandisk",
+   "MediaTek",
+   "Marvell Technology",
+   "SAP",
+   "IBM",
+   "Analog Devices",
+   "QUALCOMM",
+   "KIOXIA Holdings Corporation",
+   "Shopify",
+   "Salesforce",
+   "Seagate Technology",
+   "Schneider Electric",
+   "Advantest",
+   "Tokyo Electron",
+   "Delta Electronics",
+   "Sony",
+   "Uber",
+   "ServiceNow",
+   "Fortinet",
+   "Cloudflare",
+   "ASE Group",
+   "Keyence",
+   "Booking Holdings",
+   "Snowflake",
+   "Foxconn",
+   "PDD Holdings",
+   "Automatic Data Processing",
+   "Robinhood",
+   "Equinix",
+   "Datadog",
+   "Lumentum",
+   "Airbnb",
+   "Murata Manufacturing",
+   "Spotify",
+   "Cadence Design Systems",
+   "Cambricon Technologies",
+   "Infineon",
+   "Adobe",
+   "Synopsys",
+   "Hewlett Packard Enterprise",
+   "AppLovin",
+   "MercadoLibre",
+   "DoorDash",
+   "Xiaomi",
+   "Intuit",
+   "NetEase",
+   "Monolithic Power Systems",
+   "Panasonic",
+   "Unimicron",
+   "NAURA Technology Group",
+   "Coherent Corp.",
+   "United Microelectronics",
+   "SMIC",
+   "Keysight",
+   "TE Connectivity",
+   "MicroStrategy",
+   "Nebius Group",
+   "NXP Semiconductors",
+   "Astera Labs",
+   "Nokia",
+   "Sea Limited",
+   "Nintendo",
+   "Meituan",
+   "Lenovo",
+   "Garmin",
+   "ASM International",
+   "Nanya Technology"
+  ],
+  "japan_tech": [
+   "Caterpillar",
+   "Apple",
+   "NVIDIA Corporation",
+   "Microsoft Corporation",
+   "Amazon.com",
+   "Alphabet (Google)"
+  ],
+  "eu_largest_revenue": [
+   "Deutsche Telekom",
+   "Accenture",
+   "Vodafone",
+   "Telefónica",
+   "Orange S.A."
+  ]
+ }
+}

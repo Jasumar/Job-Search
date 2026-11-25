@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/*
+ * 3.8i palette — SINGLE SOURCE OF TRUTH (plan-frontend.md 3.8i):
+ * all user-facing screens consume these only via named theme utilities
+ * (bg-cream, text-maroon, bg-lime, …). Never raw hex in components; changing
+ * a value here restyles the whole app. Default zinc/grey palette must not
+ * appear in user-facing screens.
+ */
+@theme {
+  /* Primary surface (background); cream-light is cream mixed toward white
+     for layered surfaces (cards, inputs). */
+  --color-cream: #ebdac7;
+  --color-cream-light: #f8f1e7;
+
+  /* Secondary: headline/strong text, primary buttons, filled accent cards.
+     maroon-soft is the muted variant for secondary text on cream. */
+  --color-maroon: #5d2020;
+  --color-maroon-soft: #9a6b6b;
+
+  /* Contrast: accents, highlights, active states, secondary CTAs. */
+  --color-lime: #dfe561;
+}

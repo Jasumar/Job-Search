@@ -1,0 +1,370 @@
+{
+  "snapshot": "2026-10-09",
+  "pages_scored": 15,
+  "pages_with_names": 13,
+  "labelled_recall": 0.42105263157894735,
+  "labelled_found": 24,
+  "labelled_expected": 57,
+  "unscored": [
+    {
+      "url": "https://www.startupblink.com/top-startups/estonia",
+      "reason": "snapshot body missing or empty"
+    }
+  ],
+  "rows": [
+    {
+      "url": "https://companiesmarketcap.com/tech/largest-tech-companies-by-market-cap/",
+      "family": 1,
+      "extracted": 100,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 6,
+      "labelled_found": 6,
+      "labelled_missed": [],
+      "full_expected": 100,
+      "full_found": 98,
+      "sample": [
+        "NVIDIA",
+        "Apple",
+        "Alphabet (Google)",
+        "Microsoft",
+        "Amazon",
+        "TSMC",
+        "SpaceX",
+        "Meta Platforms (Facebook)"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_largest_technology_companies_by_revenue",
+      "family": 1,
+      "extracted": 52,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 6,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "nvidia",
+        "apple",
+        "google",
+        "microsoft",
+        "amazon",
+        "samsung"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "América Móvil",
+        "AT&T",
+        "Axiata",
+        "Bell Canada",
+        "Bharti Airtel",
+        "Bridge Alliance",
+        "BT Group",
+        "China Mobile"
+      ]
+    },
+    {
+      "url": "https://money.usnews.com/investing/articles/most-valuable-tech-companies-in-the-world",
+      "family": 1,
+      "extracted": 11,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 3,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "nvidia",
+        "microsoft",
+        "apple"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Company",
+        "NVDA",
+        "MSFT",
+        "AAPL",
+        "AVGO",
+        "TSM",
+        "ORCL",
+        "PLTR"
+      ]
+    },
+    {
+      "url": "https://www.zoominfo.com/top-lists/top-finance-companies-in-FI",
+      "family": 2,
+      "extracted": 14,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 3,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Construction",
+        "Law Firms & Legal Services",
+        "Business Services",
+        "Finance",
+        "Manufacturing",
+        "Agriculture",
+        "Software",
+        "Accounting & Accounting Services"
+      ]
+    },
+    {
+      "url": "https://www.finanssiala.fi/en/topics/financial-sectors-tax-handprint/",
+      "family": 2,
+      "extracted": 0,
+      "route": null,
+      "reason": "static_html: anchors: largest link group has 1 entries (needs 8); largest link group has 7 entries (needs 8); list (ul 20): 9 items, 22% name-like",
+      "labelled_expected": 3,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": []
+    },
+    {
+      "url": "https://nordsek.com/pankit-ja-rahoitusyhtiot-suomessa/",
+      "family": 2,
+      "extracted": 21,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 3,
+      "labelled_found": 2,
+      "labelled_missed": [
+        "op_pohjola"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Aktia",
+        "Bank Norwegian",
+        "Bigbank",
+        "Bondora",
+        "Brocc",
+        "Creditstar",
+        "Danske Bank",
+        "Ferratum"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_largest_companies_in_Finland",
+      "family": 3,
+      "extracted": 9,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 4,
+      "labelled_found": 4,
+      "labelled_missed": [],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Nordea",
+        "Fortum",
+        "Nokia",
+        "Kone",
+        "Neste",
+        "Sampo Group",
+        "Stora Enso",
+        "UPM"
+      ]
+    },
+    {
+      "url": "https://companiesmarketcap.com/finland/largest-companies-by-revenue-in-finland/",
+      "family": 3,
+      "extracted": 91,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 4,
+      "labelled_found": 4,
+      "labelled_missed": [],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Neste",
+        "Nokia",
+        "Kesko",
+        "Nordea Bank",
+        "Sampo",
+        "KONE",
+        "UPM-Kymmene",
+        "Stora Enso"
+      ]
+    },
+    {
+      "url": "https://bullfincher.io/ranking/top-companies-in-finland-by-revenue",
+      "family": 3,
+      "extracted": 93,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 4,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Advertising",
+        "Aluminium",
+        "Asset Management",
+        "Big Financials",
+        "Business Services",
+        "Capital Goods",
+        "Capital Markets",
+        "Care Facilities"
+      ]
+    },
+    {
+      "url": "https://www.failory.com/startups/finland",
+      "family": 4,
+      "extracted": 93,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 3,
+      "labelled_found": 3,
+      "labelled_missed": [],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Oura",
+        "IQM Quantum Computers",
+        "DataCrunch.io",
+        "MuniFin",
+        "ReOrbit",
+        "ICEYE",
+        "One Click Lca",
+        "RELEX Solutions"
+      ]
+    },
+    {
+      "url": "https://seedtable.com/best-startups-in-finland",
+      "family": 4,
+      "extracted": 10,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 4,
+      "labelled_found": 4,
+      "labelled_missed": [],
+      "full_expected": 10,
+      "full_found": 10,
+      "sample": [
+        "ICEYE",
+        "Oura",
+        "Verda",
+        "IQM",
+        "NestAI",
+        "Aiforia",
+        "Steady Energy",
+        "ReOrbit"
+      ]
+    },
+    {
+      "url": "https://suomenyritykset.fi/suomen-lupaavimmat-startupit-2025/",
+      "family": 4,
+      "extracted": 15,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 1,
+      "labelled_found": 1,
+      "labelled_missed": [],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "ICEYE",
+        "Bob W",
+        "Solar Foods",
+        "Steady Energy",
+        "ReOrbit",
+        "Onego Bio",
+        "Carbonaide",
+        "Woamy"
+      ]
+    },
+    {
+      "url": "https://www.itewiki.fi/yritykset/ohjelmistokehitys/oulu",
+      "family": 6,
+      "extracted": 12,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 5,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "digia",
+        "vincit",
+        "evermade",
+        "wapice",
+        "netum"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus",
+        "Tarjonnan kuvaus"
+      ]
+    },
+    {
+      "url": "https://fi.wikipedia.org/wiki/Luokka:Suomalaiset_ohjelmistoyritykset",
+      "family": 6,
+      "extracted": 16,
+      "route": "static_html",
+      "reason": null,
+      "labelled_expected": 4,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "digia",
+        "vincit",
+        "wapice",
+        "lemonsoft"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": [
+        "Listaa alakategoriat",
+        "Hae viitteettömät artikkelit",
+        "Hae lähdepyynnölliset artikkelit",
+        "Huomiota kaipaavat sivut",
+        "Arvioidut artikkelit",
+        "Huomiota kaipaavat arvioidut artikkelit",
+        "Keskeiset artikkelit",
+        "Hae tyngät"
+      ]
+    },
+    {
+      "url": "https://www.itewiki.fi/yritykset/turku",
+      "family": 6,
+      "extracted": 0,
+      "route": null,
+      "reason": "static_html: anchors: largest link group has 6 entries (needs 8); largest link group has 6 entries (needs 8); list (ul 10): 10 items, 40% name-like",
+      "labelled_expected": 4,
+      "labelled_found": 0,
+      "labelled_missed": [
+        "digia",
+        "vincit",
+        "wapice",
+        "netum"
+      ],
+      "full_expected": null,
+      "full_found": null,
+      "sample": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jobsearch-worker"
+version = "0.1.0"
+description = "Long-running scheduler/worker service (Phase M1)"
+requires-python = ">=3.11"
+dependencies = [
+    "jobsearch-core",
+]
+
+[project.scripts]
+jobsearch-worker = "jobsearch_worker.main:main"
+
+[tool.uv.sources]
+jobsearch-core = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobsearch_worker"]

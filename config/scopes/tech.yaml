@@ -1,0 +1,93 @@
+# Bootstrap SearchScope for the tech domain.
+#
+# This scope decouples the pipeline's hardcoded tech orientation (Phase 3.6a).
+# `employer_scope` is the noun phrase interpolated into the company-identity,
+# listicle-mining, and query-expansion prompts in place of "technology employer".
+# `role_families` drives the classic role-family discovery queries, the
+# `company_segment_templates` (one `{country}` placeholder per template) drive the
+# Stage A company-identity baselines, and `role_family_segments` maps role
+# families to wizard chips.
+#
+# A future phase generates a SearchScope from user inputs (CV, target locations,
+# domains/titles, and other quickly obtainable facts); this is the bootstrap.
+
+# Ordered role→segment mapping for the wizard chips (master_plan 2026-09-11).
+# Segment names refer to `company_segment_names` below; the order inside each
+# family decides which segments survive the per-chip cap of 3. Derived data —
+# human-review whenever segments change.
+role_family_segments:
+  backend:
+    label: "Backend & Python"
+    segments: [software, technology, startup]
+  data:
+    label: "Data engineering & analytics"
+    segments: [software, fintech, finance]
+  ai:
+    label: "AI / machine learning"
+    segments: [ai, software, startup]
+  automation:
+    label: "Automation & DevOps"
+    segments: [industrial, software, automation]
+
+# MF3: which taxonomy ids (config/role_taxonomy.yaml) select each discovery
+# family. Discovery stays tech-scoped: a selection with no id listed here (for
+# example only legal roles) gives no family and so no family narrowing. A group
+# id ("technology") selects every family that lists one of its roles.
+role_family_taxonomy:
+  backend: [technology/backend, technology/software-engineer, technology/fullstack, technology/architect]
+  data: [technology/data-engineer, technology/data-analyst, technology/data-scientist]
+  ai: [technology/ml-engineer]
+  automation: [technology/devops, technology/qa, technology/solutions-engineer]
+
+employer_scope: "technology employers that build or operate software, data, AI, or automation technology"
+
+role_families:
+  backend: ["backend", "Python", "Node.js", "Java"]
+  data: ["data engineer", "data scientist", "analytics"]
+  ai: ["AI/ML engineer", "LLM", "NLP", "machine learning engineer"]
+  automation: ["automation engineer", "DevOps", "CI/CD", "internal tools"]
+
+role_titles:
+  - "Software Engineer"
+  - "Backend Engineer"
+  - "Python Developer"
+  - "Data Engineer"
+  - "Data Scientist"
+  - "Machine Learning Engineer"
+  - "AI Engineer"
+  - "DevOps Engineer"
+  - "Automation Engineer"
+  - "Platform Engineer"
+  - "Solutions Engineer"
+
+# Phase 4.3 precision-strike templates: one narrow query per segment, no OR
+# chains across segments. One template = one baseline query per selected
+# country, so the budget math in DiscoveryBudget scales with segments x
+# countries. Keep each template single-purpose; the scope stays tech-adjacent
+# segment data (master_plan.md "Discovery Query Precision Direction").
+company_segment_templates:
+  - '"{country}" software company careers'
+  - '"{country}" technology company careers'
+  - '"{country}" startup hiring'
+  - '"{country}" scaleup hiring'
+  - '"{country}" "growth company" careers'
+  - '"{country}" international company local office careers'
+  - '"{country}" fintech company careers'
+  - '"{country}" industrial company "software engineering" careers'
+  - '"{country}" retail company technology careers'
+  - '"{country}" insurance company "software engineering" careers'
+  - '"{country}" finance company technology careers'
+
+# Segment name per template above, positionally aligned (wizard mapping data).
+company_segment_names:
+  - software
+  - technology
+  - startup
+  - scaleup
+  - growth
+  - international
+  - fintech
+  - industrial
+  - retail
+  - insurance
+  - finance

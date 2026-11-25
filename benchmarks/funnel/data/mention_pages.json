@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "source": "benchmarks/benchmarks_setup.md",
+    "converted": "2026-10-09",
+    "note": "all links hand-verified by user 2026-10-09; expected 'all' expanded to family company ids"
+  },
+  "pages": [
+    {
+      "family": 1,
+      "url": "https://companiesmarketcap.com/tech/largest-tech-companies-by-market-cap/",
+      "expected": [
+        "nvidia",
+        "apple",
+        "google",
+        "microsoft",
+        "amazon",
+        "samsung"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 1,
+      "url": "https://en.wikipedia.org/wiki/List_of_largest_technology_companies_by_revenue",
+      "expected": [
+        "nvidia",
+        "apple",
+        "google",
+        "microsoft",
+        "amazon",
+        "samsung"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 1,
+      "url": "https://money.usnews.com/investing/articles/most-valuable-tech-companies-in-the-world",
+      "expected": [
+        "nvidia",
+        "microsoft",
+        "apple"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Nvidia, Microsoft, Apple"
+    },
+    {
+      "family": 2,
+      "url": "https://www.zoominfo.com/top-lists/top-finance-companies-in-FI",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 2,
+      "url": "https://www.finanssiala.fi/en/topics/financial-sectors-tax-handprint/",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 2,
+      "url": "https://nordsek.com/pankit-ja-rahoitusyhtiot-suomessa/",
+      "expected": [
+        "nordea",
+        "op_pohjola",
+        "danske_bank"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 3,
+      "url": "https://en.wikipedia.org/wiki/List_of_largest_companies_in_Finland",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 3,
+      "url": "https://companiesmarketcap.com/finland/largest-companies-by-revenue-in-finland/",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 3,
+      "url": "https://bullfincher.io/ranking/top-companies-in-finland-by-revenue",
+      "expected": [
+        "neste",
+        "nokia",
+        "kone",
+        "kesko"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 4,
+      "url": "https://www.failory.com/startups/finland",
+      "expected": [
+        "oura",
+        "iqm",
+        "iceye"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Oura, IQM, ICEYE"
+    },
+    {
+      "family": 4,
+      "url": "https://seedtable.com/best-startups-in-finland",
+      "expected": [
+        "iceye",
+        "oura",
+        "iqm",
+        "nestai"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "all"
+    },
+    {
+      "family": 4,
+      "url": "https://suomenyritykset.fi/suomen-lupaavimmat-startupit-2025/",
+      "expected": [
+        "iceye"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "ICEYE"
+    },
+    {
+      "family": 5,
+      "url": "https://www.startupblink.com/top-startups/estonia",
+      "expected": [
+        "bolt"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Bolt"
+    },
+    {
+      "family": 6,
+      "url": "https://www.itewiki.fi/yritykset/ohjelmistokehitys/oulu",
+      "expected": [
+        "digia",
+        "vincit",
+        "evermade",
+        "wapice",
+        "netum"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Digia, Vincit, Evermade, Wapice, Netum"
+    },
+    {
+      "family": 6,
+      "url": "https://fi.wikipedia.org/wiki/Luokka:Suomalaiset_ohjelmistoyritykset",
+      "expected": [
+        "digia",
+        "vincit",
+        "wapice",
+        "lemonsoft"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Digia, Vincit, wapice, lemonsoft"
+    },
+    {
+      "family": 6,
+      "url": "https://www.itewiki.fi/yritykset/turku",
+      "expected": [
+        "digia",
+        "vincit",
+        "wapice",
+        "netum"
+      ],
+      "verified": true,
+      "last_verified": "2026-10-09",
+      "expected_raw": "Digia, Vincit, Wapice, Netum"
+    }
+  ]
+}
